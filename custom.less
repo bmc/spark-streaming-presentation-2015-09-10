@@ -1,0 +1,90 @@
+// Reveal.js local overrides.
+//
+// NOTE: !important is, regrettably, necessary to override all the !important uses in the
+// reveal.js stylesheets.
+
+// Variables
+
+// @font-size: 54px;
+@code-font-size: 20px;
+@font-size: 40px;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+// Mixins
+
+.gradient (@gradient-top: #ffffff, @gradient-bottom: #A9B0AE) {
+  background: @gradient-top; /* Old browsers */
+  background: -moz-linear-gradient(top, @gradient-top 0%, @gradient-bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@gradient-top), color-stop(100%,@gradient-bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, @gradient-top 0%,@gradient-bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, @gradient-top 0%,@gradient-bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, @gradient-top 0%,@gradient-bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom, @gradient-top 0%,@gradient-bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@gradient-top', endColorstr='@gradient-bottom',GradientType=0 ); /* IE6-9 */
+}
+
+.code-block () {
+  font-size: @code-font-size !important;
+  font-family: Mensch, Consolas, Courier, monospace;
+  line-height: 120%;
+  margin-left: 30px;
+}
+
+// Rules
+
+html {
+}
+
+body {
+  font-size: @font-size;
+  background-image: url('../images/ardentex-logo.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+
+p, ul, ol {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  img {
+    height: 100px !important;
+    border: 0;
+  }
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif !important;
+  text-transform: none !important;
+}
+
+ul {
+  ul {
+    li {
+      font-size: smaller !important;
+    }
+  }
+}
+
+pre {
+  border: 1px solid white !important;
+  background-color: #3f3f3f;
+  padding: 0;
+
+  code {
+    padding: 5px !important;
+  }
+}
+
+img {
+  border-right-color: white !important;
+  border-left-color: white !important;
+  border-top-color: white !important;
+  border-bottom-color: white !important;
+  box-shadow: none !important;
+}
+
