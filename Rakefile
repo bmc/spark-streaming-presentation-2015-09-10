@@ -7,28 +7,22 @@ include Grizzled::FileUtil
 task :default => :build
 
 OUTPUT_DIR    = "dist"
-HTML_SOURCES  = Dir.glob("*.html")
+HTML_SOURCES  = Dir.glob("*.html") + Dir.glob("slides/**/*.html")
 OUTPUT_SLIDES = "#{OUTPUT_DIR}/index.html"
 
 task :build => :html
 
 task :html => OUTPUT_SLIDES
 
-file OUTPUT_SLIDES => [:css, :js, :images, :themes] + HTML_SOURCES do
-  puts "pres.html => #{OUTPUT_DIR}/index.html"
-  inc = Includer.new("slides.html", include_pattern: '^\s*%include\s"([^"]+)')
+file OUTPUT_SLIDES => [:css, :js, :images] + HTML_SOURCES do
+  puts "presentation.html => #{OUTPUT_DIR}/index.html"
+  inc = Includer.new("presentation.html", include_pattern: '^\s*%include\s"([^"]+)')
   lines = inc.to_a
   File.open "#{OUTPUT_DIR}/index.html", "w" do |f|
     lines.each do |line|
       f.write(line)
     end
   end
-end
-
-task :themes => "#{OUTPUT_DIR}/themes"
-
-file "#{OUTPUT_DIR}/themes" => Dir.glob('highlightjs-themes/*') do
-  cp_r 'highlightjs-themes', "#{OUTPUT_DIR}/themes"
 end
 
 task :js => ["bower_components/reveal.js",

@@ -7,11 +7,8 @@
     <link href="js/reveal.js/css/theme/white.css" rel="stylesheet"/>
     <script type="text/javascript" src="js/reveal.js/lib/js/head.min.js"></script>
     <script type="text/javascript" src="js/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="js/highlightjs/highlight.pack.js"></script>
     <link rel="stylesheet" href="js/highlightjs/styles/tomorrow-night.css"/>
-<!--
-    <link rel="stylesheet" href="themes/tomorrow-night-blue.css"/>
--->
+
     <link href="css/custom.css" rel="stylesheet"/>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -32,15 +29,15 @@
   <body>
     <div class="reveal">
 
-    <div class="slides">
+      <div class="slides">
 
-      %include "slide01.html"
-      %include "slide02.html"
-      %include "slide03.html"
+        %include "slides/slide01.html"
+        %include "slides/slide02.html"
+        %include "slides/slide03.html"
 
-      <section>
-        <pre>
-          <code class="scala" data-trim>
+        <section>
+          <pre>
+            <code class="scala" data-trim>
   def foo(i: Int): Int = { println("foo") }
   def bar = {
     if (foo(i)) {
@@ -48,9 +45,10 @@
       println("and more of that")
     }
   }
-          </code>
-        </pre>
-      </section>
+            </code>
+          </pre>
+        </section>
+      </div>
     </div>
   </body>
 
@@ -60,18 +58,24 @@
       progress:     false,
       center:       false,
       transition:   'slide',
-      dependencies: {
-        src:      'plugin/highlight/highlight.js',
-        async:    true,
-        callback: function() { hljs.initHighlightingOnLoad(); }
-      }
+      // Plugins
+      dependencies: [
+        {
+          src:      'js/reveal.js/plugin/highlight/highlight.js',
+          async:    true,
+          callback: function() { hljs.initHighlightingOnLoad(); }
+        },
+        {
+          src:   'js/reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src:   'js/reveal.js/plugin/notes/notes.js',
+          async: true
+        }
+      ]
     });
 
-    $(document).ready(function() {
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-      });
-    });
   </script>
 
 </html>

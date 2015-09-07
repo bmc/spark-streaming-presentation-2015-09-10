@@ -137,5 +137,13 @@
     <text transform="matrix(1, 0, 0, 1, 116.75, 199)">
       <tspan x="-47.187" y="2.5" font-family="HelveticaNeue" font-size="14" fill="#FFFFFF">Driver Program</tspan>
     </text>
+    <g>
+      <path d="M375.5,54.5 L375.5,67" fill-opacity="0" stroke="#FFFFFF" stroke-width="1"/>
+      <path d="M372.5,67 L375.5,75 L378.5,67 z" fill="#FFFFFF" fill-opacity="1" stroke="#FFFFFF" stroke-width="1" stroke-opacity="1"/>
+    </g>
+    <g>
+      <path d="M375.5,228.5 L375.5,241" fill-opacity="0" stroke="#FFFFFF" stroke-width="1"/>
+      <path d="M372.5,241 L375.5,249 L378.5,241 z" fill="#FFFFFF" fill-opacity="1" stroke="#FFFFFF" stroke-width="1" stroke-opacity="1"/>
+    </g>
   </g>
 </svg>
