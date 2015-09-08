@@ -9,23 +9,24 @@ include Grizzled::FileUtil
 # Constants
 # ----------------------------------------------------------------------------
 
-OUTPUT_DIR    = "dist"
-HTML_SOURCES  = Dir.glob("*.html") + Dir.glob("slides/**/*.html")
-OUTPUT_SLIDES = "#{OUTPUT_DIR}/index.html"
-SLIDES_LIST   = "slide-list.tmp"
+OUTPUT_DIR     = "dist"
+HTML_SOURCES   = Dir.glob("*.html") + Dir.glob("slides/**/*.html")
+OUTPUT_SLIDES  = "#{OUTPUT_DIR}/index.html"
+SLIDES_LIST    = "slide-list.tmp"
+# Since SVG images are inlined, we don't want to copy them. We also
+# don't want to copy iDraw sources.
+IMAGES_TO_COPY = Dir.glob("images/*.{png,jpg}")
 
 # ----------------------------------------------------------------------------
 # Tasks
 # ----------------------------------------------------------------------------
 
 task :default => :build
-
 task :build => :html
 task :dist => :build
-
 task :html => OUTPUT_SLIDES
 
-file OUTPUT_SLIDES => [:css, :js, :images, :slidelist] + HTML_SOURCES do
+file OUTPUT_SLIDES => [:css, :js, :images] + HTML_SOURCES do
   puts "presentation.html => #{OUTPUT_DIR}/index.html"
   inc = Includer.new("presentation.html",
                      include_pattern: '^\s*%include\s"([^"]+)',
@@ -34,20 +35,6 @@ file OUTPUT_SLIDES => [:css, :js, :images, :slidelist] + HTML_SOURCES do
   File.open "#{OUTPUT_DIR}/index.html", "w" do |f|
     lines.each do |line|
       f.write(line)
-    end
-  end
-end
-
-task :slidelist => SLIDES_LIST
-
-file SLIDES_LIST => HTML_SOURCES do
-  puts "Creating #{SLIDES_LIST}..."
-  # Build slides.tmp, which presentation.html includes.
-  File.open SLIDES_LIST, "w" do |f|
-    # Note that we only grab the top-level slides. The top-level slides
-    # are responsible for pulling in their sub-slides.
-    Dir.glob("slides/slide[0-9][0-9].html").each do |path|
-      f.write("%include \"#{path}\"\n")
     end
   end
 end
@@ -62,7 +49,8 @@ task :js => ["bower_components/reveal.js",
 end
 
 task :images => [:svg, "images/"] do
-  cp_r "images", OUTPUT_DIR
+  mkdir_p "#{OUTPUT_DIR}/images"
+  IMAGES_TO_COPY.each { |p| cp p, "#{OUTPUT_DIR}/images" }
 end
 
 SVG_FILES = Dir.glob("images/**/*.svg")
@@ -84,7 +72,6 @@ end
 
 task :clean do
   rm_rf OUTPUT_DIR
-  rm_f Dir.glob("*.tmp")
 end
 
 # ----------------------------------------------------------------------------
