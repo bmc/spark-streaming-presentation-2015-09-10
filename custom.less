@@ -35,10 +35,32 @@ body {
   font-size: @font-size;
   font-family: @font-family;
   font-weight: @font-weight;
-  background-image: url('../images/ardentex-logo.png');
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-size: 100px;
+}
+
+.logo {
+  width: 100px;
+}
+
+img {
+  border: none !important;
+  background-color: transparent !important;
+  vertical-align: text-bottom;
+}
+
+.title-slide {
+  // background: rgba(255, 255, 255, 0.65);
+
+  h1, h2, h3 {
+    // color: #23d7d8 !important;
+    color: black !important;
+    text-shadow: 0px 0px 8px white;
+  }
+
+  p {
+    color: yellow !important;
+    text-shadow: 0px 0px 8px black;
+  }
+
 }
 
 #logo {
@@ -86,8 +108,8 @@ pre {
   padding: 0;
 
   code {
-    padding: 5px !important;
-    font-family: @monospace-font-family;
+    padding: 15px !important;
+    font-family: @monospace-font-family !important;
   }
 }
 

@@ -36,8 +36,8 @@ file SLIDES_LIST => HTML_SOURCES do
   File.open SLIDES_LIST, "w" do |f|
     # Note that we only grab the top-level slides. The top-level slides
     # are responsible for pulling in their sub-slides.
-    Dir.glob("slides/slides[0-9][0-9].html").each do |path|
-      f.write('%include "' + path + '"')
+    Dir.glob("slides/slide[0-9][0-9].html").each do |path|
+      f.write("%include \"#{path}\"\n")
     end
   end
 end
