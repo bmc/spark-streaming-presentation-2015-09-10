@@ -1,8 +1,28 @@
 <section data-background="images/bg2.jpg">
   <h2>
     <img src="images/ardentex-logo.png" class="logo"/>
-    Actions
+    Transformations
   </h2>
 
-  %include "../images/rdd4.svg"
+  <ul>
+    <li class="fragment">
+      Transformations are <i>lazy</i>.
+    </li>
+
+    <li class="fragment">
+      They contribute to the execution plan (called the <i>DAG</i>, for
+      <i>Directed Acyclic Graph</i>), but they don't execute anything.
+    </li>
+
+    <li class="fragment">
+      No file is read and no transformation is performed until an
+      <i>action</i> is called.
+    </li>
+
+    <li class="fragment">
+      A RDD transformation is conceptually similar to a transformation
+      (like <code>filter()</code> or <code>map()</code>) on a Scala collection
+      <i>view</i>.
+    </li>
+  </ul>
 </section>

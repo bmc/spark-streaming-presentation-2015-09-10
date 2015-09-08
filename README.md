@@ -1,18 +1,23 @@
 Source for Philly Area Scala Enthusiasts [PHASE][] presentation on
 [Apache Spark](http://spark.apache.org) Streaming, 10 September, 2015.
 
-Requires the following software:
+## Preparation
 
-* [Ruby][]
-* The Ruby `bundler` gem.
-* The `lessc` command, to process the [LESS][] stylesheets.
+1. Install [NodeJS][] and `npm`.
+2. Install the [LESS][] preprocessor: `npm install -g less`
+3. Make sure you have a version of Ruby 2 installed. (This stuff has been
+   tested with 2.2.3.)
+4. Install Bundler: `gem install bundler`
+5. Use Bundler to install the required Ruby gems: `bundle install`
 
-Once you have all that stuff handy, simply run:
+# Building the Slides
 
-    $ bundle install
+Once you've successfully completed preparation, building the slide deck
+is as simple as:
+
     $ rake
 
-to build `dist/index.html`, a [Reveal.js][] slide show. Just
+Rake will build `dist/index.html`, a [Reveal.js][] slide show. Just
 open the file in your browser, and away you go.
 
 To create PDF versions of the slides, open the HTML slides in Chrome or Chromium. Then,
@@ -24,3 +29,4 @@ for details.
 [Bundler]: http://gembundler.com/
 [LESS]: http://lesscss.org/
 [Reveal.js]: https://github.com/hakimel/reveal.js
+[NodeJS]: http://nodejs.org

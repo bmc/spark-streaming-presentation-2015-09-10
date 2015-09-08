@@ -31,30 +31,15 @@
 
       <div class="slides">
 
-        %include "slide-list.tmp"
+        %include "slides/slide[0-9][0-9].html"
 
-<!--
-        <section id="99">
-          <pre>
-            <code class="scala" data-trim>
-  def foo(i: Int): Int = { println("foo") }
-  def bar = {
-    if (foo(i)) {
-      println("more of this")
-      println("and more of that")
-    }
-  }
-            </code>
-          </pre>
-        </section>
--->
       </div>
     </div>
   </body>
 
   <script type="text/javascript">
     Reveal.initialize({
-      slideNumber:  false,
+      slideNumber:  true,
       progress:     false,
       center:       false,
       history:      true,

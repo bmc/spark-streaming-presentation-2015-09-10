@@ -1,0 +1,23 @@
+<section data-background="images/bg2.jpg">
+  <h2>DataFrames</h2>
+
+  <p>
+    Here's an example of using a DataFrame to read a Parquet file. Parquet
+    files have a self-describing schema, so they can be used directly from
+    the DataFrame API.
+  </p>
+
+  <pre>
+
+    <code class="scala" data-trim>
+val df = sqlContext.read.parquet(
+   "hdfs://mynamenode:9000/data/employees.parquet"
+)
+val df2 = df.filter(df("age") < 30)
+val youngsters = df2.collect()
+
+val linesRDD = sc.textFile("s3n://my-spark-bucket/foobar.txt")
+    </code>
+  </pre>
+
+</section>

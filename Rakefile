@@ -5,12 +5,20 @@ require 'grizzled/fileutil/includer'
 require 'nokogiri'
 include Grizzled::FileUtil
 
-task :default => :build
+# ----------------------------------------------------------------------------
+# Constants
+# ----------------------------------------------------------------------------
 
 OUTPUT_DIR    = "dist"
 HTML_SOURCES  = Dir.glob("*.html") + Dir.glob("slides/**/*.html")
 OUTPUT_SLIDES = "#{OUTPUT_DIR}/index.html"
 SLIDES_LIST   = "slide-list.tmp"
+
+# ----------------------------------------------------------------------------
+# Tasks
+# ----------------------------------------------------------------------------
+
+task :default => :build
 
 task :build => :html
 task :dist => :build
@@ -19,7 +27,9 @@ task :html => OUTPUT_SLIDES
 
 file OUTPUT_SLIDES => [:css, :js, :images, :slidelist] + HTML_SOURCES do
   puts "presentation.html => #{OUTPUT_DIR}/index.html"
-  inc = Includer.new("presentation.html", include_pattern: '^\s*%include\s"([^"]+)')
+  inc = Includer.new("presentation.html",
+                     include_pattern: '^\s*%include\s"([^"]+)',
+                     allow_glob: true)
   lines = inc.to_a
   File.open "#{OUTPUT_DIR}/index.html", "w" do |f|
     lines.each do |line|
@@ -61,7 +71,7 @@ task :svg => SVG_FILES do
   # starts with "Layer" so that the <g> element is a Reveal.js fragment.
   SVG_FILES.each do |svg|
     puts "Animating layers in #{svg}..."
-    svg_layers_to_fragments svg
+    augment_svg svg
   end
 end
 
@@ -77,7 +87,26 @@ task :clean do
   rm_f Dir.glob("*.tmp")
 end
 
-def svg_layers_to_fragments(svg_file, add_fragment_index: true)
+# ----------------------------------------------------------------------------
+# Helper functions
+# ----------------------------------------------------------------------------
+
+# Augment an SVG in two ways:
+#
+# 1. Remove the "x", "y" and "viewBox" attributes from the <svg> element.
+# 2. Find any layers and mark them with class="fragment", so that Reveal.js
+#    will animated them. A layer is assumed to be an SVG group (<g> element)
+#    with an ID. Tools like iDraw use <g> elements with "id" attributes to
+#    mark layers.
+#
+# Parameters:
+#
+# svg_file           - the path to the SVG image
+# add_fragment_index - If true (the default), also add a
+#                      data-fragment-index="n" attribute to each layer <g>
+#                      element, to force the layers to show up in the order
+#                      they appear in the image.
+def augment_svg(svg_file, add_fragment_index: true)
   image = File.open(svg_file) { |f| Nokogiri::XML(f) }
   image.remove_namespaces!
   image.xpath("//g[contains(@id, 'Layer_')]").each_with_index do |g, i|

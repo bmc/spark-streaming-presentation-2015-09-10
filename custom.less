@@ -13,19 +13,6 @@
 @monospace-font-family: Mensch, Consolas, Courier, monospace;
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
-// Mixins
-
-.gradient (@gradient-top: #ffffff, @gradient-bottom: #A9B0AE) {
-  background: @gradient-top; /* Old browsers */
-  background: -moz-linear-gradient(top, @gradient-top 0%, @gradient-bottom 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@gradient-top), color-stop(100%,@gradient-bottom)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, @gradient-top 0%,@gradient-bottom 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, @gradient-top 0%,@gradient-bottom 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, @gradient-top 0%,@gradient-bottom 100%); /* IE10+ */
-  background: linear-gradient(to bottom, @gradient-top 0%,@gradient-bottom 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@gradient-top', endColorstr='@gradient-bottom',GradientType=0 ); /* IE6-9 */
-}
-
 // Rules
 
 html {
@@ -45,6 +32,10 @@ img {
   border: none !important;
   background-color: transparent !important;
   vertical-align: text-bottom;
+}
+
+p {
+  text-align: left;
 }
 
 .title-slide {
