@@ -8,6 +8,9 @@
 // @font-size: 54px;
 @code-font-size: 20px;
 @font-size: 40px;
+@font-weight: 300;
+@font-family: "Open Sans", "Source Sans Pro", sans-serif;
+@monospace-font-family: Mensch, Consolas, Courier, monospace;
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
 // Mixins
@@ -23,13 +26,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@gradient-top', endColorstr='@gradient-bottom',GradientType=0 ); /* IE6-9 */
 }
 
-.code-block () {
-  font-size: @code-font-size !important;
-  font-family: Mensch, Consolas, Courier, monospace;
-  line-height: 120%;
-  margin-left: 30px;
-}
-
 // Rules
 
 html {
@@ -37,14 +33,12 @@ html {
 
 body {
   font-size: @font-size;
+  font-family: @font-family;
+  font-weight: @font-weight;
   background-image: url('../images/ardentex-logo.png');
   background-position: top left;
   background-repeat: no-repeat;
   background-size: 100px;
-}
-
-p, ul, ol {
-  font-family: 'Open Sans', sans-serif !important;
 }
 
 #logo {
@@ -70,6 +64,22 @@ ul {
   }
 }
 
+&.right {
+  position: absolute;
+  top: 250px;
+  right: 0;
+}
+
+&.left {
+  position: absolute;
+  top:  100px;
+  left: 100px;
+}
+
+.sidebar {
+  font-size: 14px !important;
+}
+
 pre {
   border: 1px solid white !important;
   background-color: #3f3f3f;
@@ -77,6 +87,7 @@ pre {
 
   code {
     padding: 5px !important;
+    font-family: @monospace-font-family;
   }
 }
 

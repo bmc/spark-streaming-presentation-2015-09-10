@@ -31,11 +31,10 @@
 
       <div class="slides">
 
-        %include "slides/slide01.html"
-        %include "slides/slide02.html"
-        %include "slides/slide03.html"
+        %include "slide-list.tmp"
 
-        <section>
+<!--
+        <section id="99">
           <pre>
             <code class="scala" data-trim>
   def foo(i: Int): Int = { println("foo") }
@@ -48,15 +47,17 @@
             </code>
           </pre>
         </section>
+-->
       </div>
     </div>
   </body>
 
   <script type="text/javascript">
     Reveal.initialize({
-      slideNumber:  true,
+      slideNumber:  false,
       progress:     false,
       center:       false,
+      history:      true,
       transition:   'slide',
       // Plugins
       dependencies: [
@@ -72,9 +73,27 @@
         {
           src:   'js/reveal.js/plugin/notes/notes.js',
           async: true
+        },
+        { src: 'js/reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector( '[data-markdown]' );
+          }
+        },
+        { src: 'js/reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector( '[data-markdown]' );
+          }
         }
       ]
     });
+
+    Reveal.addEventListener('markdown-slide', function(e) {
+      // Alternative to adding ugly HTML for Markdown elements:
+      // Mark slide section with data-state="markdown-slide", and
+      // this code will add fragment classes to all <li>
+      // elements in the slide when the slide is shown.
+      $("section.present li").addClass("fragment");
+    }, false);
 
   </script>
 
