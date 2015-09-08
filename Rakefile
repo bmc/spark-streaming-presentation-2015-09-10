@@ -73,7 +73,8 @@ file "#{OUTPUT_DIR}/css/custom.css" => ['custom.less'] do
 end
 
 task :clean do
-  rm_rf "#{OUTPUT_DIR} *.tmp"
+  rm_rf OUTPUT_DIR
+  rm_f Dir.glob("*.tmp")
 end
 
 def svg_layers_to_fragments(svg_file, add_fragment_index: true)
