@@ -5,9 +5,9 @@
 
 // Variables
 
-// @font-size: 54px;
 @code-font-size: 16px;
 @font-size: 40px;
+@footer-font-size: @font-size - 15px;
 @font-weight: 300;
 @font-family: "Open Sans", "Source Sans Pro", sans-serif;
 @monospace-font-family: Mensch, Consolas, Courier, monospace;
@@ -22,6 +22,30 @@ body {
   font-size: @font-size;
   font-family: @font-family;
   font-weight: @font-weight;
+}
+
+#footer {
+  position: absolute;
+  left: 100px;
+  bottom: 10px;
+  height: 75px;
+  width: 100%;
+  font-size: @footer-font-size;
+
+  .text {
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+  }
+
+  img {
+    height: 75px !important;
+    width: 68px;
+  }
+}
+
+.slide-number {
+  font-size: @footer-font-size !important;
 }
 
 .logo {
@@ -60,12 +84,12 @@ p.centered {
   text-align: center;
 }
 
-#logo {
+.logo {
   position: absolute;
   top: 10px;
   left: 10px;
   img {
-    height: 100px !important;
+    height: 60px !important;
     border: 0;
   }
 }
