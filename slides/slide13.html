@@ -1,0 +1,29 @@
+<section data-background="images/bg2.jpg">
+  <h2>
+    <img src="images/ardentex-logo.png" class="logo"/>
+    DStream Operations
+  </h2>
+
+  <ul>
+    <li class="fragment">
+      A DStream is created from a <code>StreamingContext</code>.
+    </li>
+
+    <li class="fragment">
+      Once a DStream has been created, it offers two kinds of operations:
+      <ul>
+        <li class="fragment">
+          <i>Transformations</i>, each of which yields a new DStream
+        </li>
+        <li class="fragment">
+          <i>Output operations</i>, which write data to an external system
+        </li>
+      </ul>
+    </li>
+
+    <li class="fragment">
+      Any operation applied to a DStream translates to operations on the
+      underlying RDDs that are created during stream processing.
+    </li>
+  </ul>
+</section>

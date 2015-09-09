@@ -1,0 +1,38 @@
+<section data-background="images/bg2.jpg">
+  <h2>
+    <img src="images/ardentex-logo.png" class="logo"/>
+    Spark Streaming
+  </h2>
+
+  <ul>
+    <li class="fragment">
+      At the end of the time interval the batch is done growing.
+      <ul>
+        <li class="fragment">
+          The size of the time intervals is determined by a parameter called
+          the <i>batch interval</i>.
+        </li>
+        <li class="fragment">
+          The batch interval is typically between 500 milliseconds and
+          several seconds and is configured by the application developer.
+        </li>
+      </ul>
+    </li>
+
+
+    <li class="fragment">
+      Each input batch forms an RDD.
+    </li>
+
+    <li class="fragment">
+      Each RDD is passed to Spark for
+      processing in a job.
+    </li>
+
+    <li class="fragment">
+      Thus, the stream is broken into pieces (RDDs) that
+      are processed individually from other pieces.
+    </li>
+  </ul>
+
+</section>

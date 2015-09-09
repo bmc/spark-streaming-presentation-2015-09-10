@@ -94,20 +94,43 @@ end
 #                      element, to force the layers to show up in the order
 #                      they appear in the image.
 def augment_svg(svg_file, add_fragment_index: true)
+  def get_classes(element)
+    attr = element.attribute('class')
+    attr = attr.value.split(/\s+/) if attr
+    attr
+  end
+
+  def set_classes(element, array)
+    element['class'] = array.join(" ")
+  end
+
   image = File.open(svg_file) { |f| Nokogiri::XML(f) }
   image.remove_namespaces!
-  image.xpath("//g[contains(@id, 'Layer_')]").each_with_index do |g, i|
-    class_attr = g.attributes['class']
-    classes = if class_attr
-                tokens = class_attr.value.split(/\s+/)
-                tokens << 'fragment' unless tokens.member?('fragment')
-                tokens
-              else
-                ['fragment']
-              end
-    g['class'] = classes.join(" ")
-    if add_fragment_index
-      g['data-fragment-index'] = (i + 1).to_s
+  layers = image.xpath("//g[@id]")
+  if layers.length == 0
+    # Nothing to do
+  elsif layers.length == 1
+    # There's only one layer. No sense causing incremental display.
+    # Remove any existing fragments.
+    g = layers[0]
+    classes = Set.new(get_classes(g))
+    if classes
+      classes.delete('fragment')
+      set_classes(g, classes.to_a)
+    end
+  else
+    layers.each_with_index do |g, i|
+      classes = get_classes(g)
+      if classes
+        classes << 'fragment' unless classes.member?('fragment')
+      else
+        classes = ['fragment']
+      end
+      set_classes(g, classes)
+
+      if add_fragment_index
+        g['data-fragment-index'] = (i + 1).to_s
+      end
     end
   end
 

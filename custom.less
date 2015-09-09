@@ -6,7 +6,7 @@
 // Variables
 
 // @font-size: 54px;
-@code-font-size: 20px;
+@code-font-size: 16px;
 @font-size: 40px;
 @font-weight: 300;
 @font-family: "Open Sans", "Source Sans Pro", sans-serif;
@@ -45,13 +45,19 @@ p {
     // color: #23d7d8 !important;
     color: black !important;
     text-shadow: 0px 0px 8px white;
+    vertical-align: bottom;
   }
 
   p {
     color: yellow !important;
     text-shadow: 0px 0px 8px black;
+    text-align: center;
   }
 
+}
+
+p.centered {
+  text-align: center;
 }
 
 #logo {
@@ -101,6 +107,7 @@ pre {
   code {
     padding: 15px !important;
     font-family: @monospace-font-family !important;
+    font-size: @code-font-size !important;
   }
 }
 

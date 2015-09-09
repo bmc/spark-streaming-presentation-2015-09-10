@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" width="936" height="612">
+  <g id="Layer_1" class="fragment" data-fragment-index="1">
+    <g>
+      <path d="M190.167,197.5 L317.167,197.5 C323.794,197.5 329.167,202.873 329.167,209.5 L329.167,297.5 C329.167,304.127 323.794,309.5 317.167,309.5 L190.167,309.5 C183.539,309.5 178.167,304.127 178.167,297.5 L178.167,209.5 C178.167,202.873 183.539,197.5 190.167,197.5 z" fill="#F6B623"/>
+      <path d="M190.167,197.5 L317.167,197.5 C323.794,197.5 329.167,202.873 329.167,209.5 L329.167,297.5 C329.167,304.127 323.794,309.5 317.167,309.5 L190.167,309.5 C183.539,309.5 178.167,304.127 178.167,297.5 L178.167,209.5 C178.167,202.873 183.539,197.5 190.167,197.5 z" fill-opacity="0" stroke="#000000" stroke-width="1.5"/>
+    </g>
+    <g>
+      <path d="M535.5,197.5 L662.5,197.5 C669.127,197.5 674.5,202.873 674.5,209.5 L674.5,297.5 C674.5,304.127 669.127,309.5 662.5,309.5 L535.5,309.5 C528.872,309.5 523.5,304.127 523.5,297.5 L523.5,209.5 C523.5,202.873 528.872,197.5 535.5,197.5 z" fill="#B2EAF5"/>
+      <path d="M535.5,197.5 L662.5,197.5 C669.127,197.5 674.5,202.873 674.5,209.5 L674.5,297.5 C674.5,304.127 669.127,309.5 662.5,309.5 L535.5,309.5 C528.872,309.5 523.5,304.127 523.5,297.5 L523.5,209.5 C523.5,202.873 528.872,197.5 535.5,197.5 z" fill-opacity="0" stroke="#000000" stroke-width="1.5"/>
+    </g>
+    <text transform="matrix(1, 0, 0, 1, 253.167, 253)">
+      <tspan x="-36.82" y="-7.333" font-family="HelveticaNeue" font-size="28" fill="#000000">Spark</tspan>
+      <tspan x="-63.798" y="26.667" font-family="HelveticaNeue" font-size="28" fill="#000000">Streaming</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 601.649, 253)">
+      <tspan x="-36.82" y="-7" font-family="HelveticaNeue" font-size="28" fill="#000000">Spark</tspan>
+      <tspan x="-30.072" y="27" font-family="HelveticaNeue" font-size="28" fill="#000000">Core</tspan>
+    </text>
+  </g>
+  <g id="Layer_2" class="fragment" data-fragment-index="2">
+    <g>
+      <g>
+        <path d="M14.833,240 L116.381,240 L116.381,267 L14.833,267 L14.833,240 z" fill="#057D37"/>
+        <path d="M14.833,240 L116.381,240 L116.381,267 L14.833,267 L14.833,240 z" fill-opacity="0" stroke="#057D37" stroke-width="2"/>
+      </g>
+      <g>
+        <path d="M35.467,253.833 L115.034,253.41" fill-opacity="0" stroke="#057D37" stroke-width="17"/>
+        <path d="M115.101,266.01 L148.634,253.232 L114.967,240.81 z" fill="#057D37" fill-opacity="1" stroke="#057D37" stroke-width="17" stroke-opacity="1"/>
+      </g>
+    </g>
+    <text transform="matrix(1, 0, 0, 1, 87.333, 197)">
+      <tspan x="-54.468" y="-6" font-family="HelveticaNeue" font-size="24" fill="#000000">Input data </tspan>
+      <tspan x="-36.684" y="23" font-family="HelveticaNeue" font-size="24" fill="#000000">stream</tspan>
+    </text>
+  </g>
+  <g id="Layer_3" class="fragment" data-fragment-index="3">
+    <g>
+      <g>
+        <path d="M338.167,240 L378.068,240 L378.068,267 L338.167,267 L338.167,240 z" fill="#057D37"/>
+        <path d="M338.167,240 L378.068,240 L378.068,267 L338.167,267 L338.167,240 z" fill-opacity="0" stroke="#057D37" stroke-width="2"/>
+      </g>
+      <g>
+        <path d="M389.791,240 L429.693,240 L429.693,267 L389.791,267 L389.791,240 z" fill="#057D37"/>
+        <path d="M389.791,240 L429.693,240 L429.693,267 L389.791,267 L389.791,240 z" fill-opacity="0" stroke="#057D37" stroke-width="2"/>
+      </g>
+      <g>
+        <g>
+          <path d="M442.491,240 L475.726,240 L475.726,267 L442.491,267 L442.491,240 z" fill="#057D37"/>
+          <path d="M442.491,240 L475.726,240 L475.726,267 L442.491,267 L442.491,240 z" fill-opacity="0" stroke="#057D37" stroke-width="2"/>
+        </g>
+        <g>
+          <path d="M451.396,253.833 L459.703,253.731" fill-opacity="0" stroke="#057D37" stroke-width="17"/>
+          <path d="M459.859,266.33 L493.301,253.317 L459.548,241.132 z" fill="#057D37" fill-opacity="1" stroke="#057D37" stroke-width="17" stroke-opacity="1"/>
+        </g>
+      </g>
+    </g>
+    <text transform="matrix(1, 0, 0, 1, 421.333, 139)">
+      <tspan x="-136.452" y="-6" font-family="HelveticaNeue" font-size="24" fill="#000000">Batches of RDDs every N </tspan>
+      <tspan x="-45.564" y="23" font-family="HelveticaNeue" font-size="24" fill="#000000">seconds</tspan>
+    </text>
+    <g>
+      <path d="M371.167,173.167 L354.891,227.42" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+      <path d="M354.891,227.42 L352.592,224.642 L353.167,233.167 L358.339,226.366 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="1" stroke-opacity="1"/>
+    </g>
+    <g>
+      <path d="M424.5,175.833 L445.572,227.609" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+      <path d="M445.572,227.609 L442.039,226.888 L447.833,233.167 L447.596,224.626 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="1" stroke-opacity="1"/>
+    </g>
+    <g>
+      <path d="M402.5,173.167 L402.5,227.167" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+      <path d="M402.5,227.167 L399.5,225.167 L402.5,233.167 L405.5,225.167 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="1" stroke-opacity="1"/>
+    </g>
+  </g>
+  <g id="Layer_4" class="fragment" data-fragment-index="4">
+    <g>
+      <g>
+        <path d="M680.167,240 L718.797,240 L718.797,267 L680.167,267 L680.167,240 z" fill="#05477D"/>
+        <path d="M680.167,240 L718.797,240 L718.797,267 L680.167,267 L680.167,240 z" fill-opacity="0" stroke="#05477D" stroke-width="2"/>
+      </g>
+      <g>
+        <path d="M730.146,240 L768.776,240 L768.776,267 L730.146,267 L730.146,240 z" fill="#05477D"/>
+        <path d="M730.146,240 L768.776,240 L768.776,267 L730.146,267 L730.146,240 z" fill-opacity="0" stroke="#05477D" stroke-width="2"/>
+      </g>
+      <g>
+        <g>
+          <path d="M781.166,240 L812.862,240 L812.862,267 L781.166,267 L781.166,240 z" fill="#05477D"/>
+          <path d="M781.166,240 L812.862,240 L812.862,267 L781.166,267 L781.166,240 z" fill-opacity="0" stroke="#05477D" stroke-width="2"/>
+        </g>
+        <g>
+          <path d="M789.787,253.833 L842.167,253.167" fill="#05477D"/>
+          <g>
+            <path d="M789.787,253.833 L796.37,253.75" fill-opacity="0" stroke="#05477D" stroke-width="17"/>
+            <path d="M796.531,266.349 L829.968,253.322 L796.21,241.151 z" fill="#05477D" fill-opacity="1" stroke="#05477D" stroke-width="17" stroke-opacity="1"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text transform="matrix(1, 0, 0, 1, 739.847, 182.5)">
+      <tspan x="-57.78" y="-20.5" font-family="HelveticaNeue" font-size="24" fill="#000000">Batches of</tspan>
+      <tspan x="-56.232" y="8.5" font-family="HelveticaNeue" font-size="24" fill="#000000">processed </tspan>
+      <tspan x="-23.784" y="37.5" font-family="HelveticaNeue" font-size="24" fill="#000000">data</tspan>
+    </text>
+  </g>
+</svg>

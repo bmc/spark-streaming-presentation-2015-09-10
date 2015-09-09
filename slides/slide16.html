@@ -1,0 +1,27 @@
+<section data-background="images/bg2.jpg">
+  <h2>
+    <img src="images/ardentex-logo.png" class="logo"/>
+    Example
+  </h2>
+
+  <pre>
+    <code class="scala" data-trim>
+import org.apache.spark.streaming._
+
+val ssc = StreamingContext(sc, Seconds(1))
+
+// Connect to the stream on port 7777 of the streaming host.
+val linesStream = ssc.socketTextStream("somehost", 7777)
+
+// Filter our DStream for lines with "error" and dump the
+// matching lines to a file.
+linesStream.filter { _ contains "error" }
+           .foreachRDD { _.saveAsTextFile("hdfs:/mynamenode:9000/data/stream") }
+
+// Start the streaming context and wait for it to "finish"
+ssc.start()
+ssc.awaitTermination()
+    </code>
+  </pre>
+
+</section>

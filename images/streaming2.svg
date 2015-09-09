@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" width="792" height="612">
+  <g id="Layer_1" class="">
+    <g>
+      <path d="M88.5,251.5 L708.5,251.5" fill-opacity="0" stroke="#000000" stroke-width="6" stroke-dasharray="36,30"/>
+      <path d="M708.5,257.5 L724.5,251.5 L708.5,245.5 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="6" stroke-opacity="1"/>
+    </g>
+    <g>
+      <path d="M215.5,209.5 L401.5,209.5 C408.127,209.5 413.5,214.873 413.5,221.5 L413.5,281.5 C413.5,288.127 408.127,293.5 401.5,293.5 L215.5,293.5 C208.873,293.5 203.5,288.127 203.5,281.5 L203.5,221.5 C203.5,214.873 208.873,209.5 215.5,209.5 z" fill="#F5F5F5"/>
+      <path d="M215.5,209.5 L401.5,209.5 C408.127,209.5 413.5,214.873 413.5,221.5 L413.5,281.5 C413.5,288.127 408.127,293.5 401.5,293.5 L215.5,293.5 C208.873,293.5 203.5,288.127 203.5,281.5 L203.5,221.5 C203.5,214.873 208.873,209.5 215.5,209.5 z" fill-opacity="0" stroke="#CF7407" stroke-width="2"/>
+    </g>
+    <g>
+      <path d="M468.5,209.5 L654.5,209.5 C661.127,209.5 666.5,214.873 666.5,221.5 L666.5,281.5 C666.5,288.127 661.127,293.5 654.5,293.5 L468.5,293.5 C461.873,293.5 456.5,288.127 456.5,281.5 L456.5,221.5 C456.5,214.873 461.873,209.5 468.5,209.5 z" fill="#FFFFFF"/>
+      <path d="M468.5,209.5 L654.5,209.5 C661.127,209.5 666.5,214.873 666.5,221.5 L666.5,281.5 C666.5,288.127 661.127,293.5 654.5,293.5 L468.5,293.5 C461.873,293.5 456.5,288.127 456.5,281.5 L456.5,221.5 C456.5,214.873 461.873,209.5 468.5,209.5 z" fill-opacity="0" stroke="#0730CF" stroke-width="2"/>
+    </g>
+    <g>
+      <g>
+        <path d="M308.505,176.5 C294.698,176.5 283.505,165.083 283.505,151 C283.505,136.917 294.698,125.5 308.505,125.5 C322.312,125.5 333.505,136.917 333.505,151 C333.505,165.083 322.312,176.5 308.505,176.5 z" fill="#F5F5F5"/>
+        <path d="M308.505,176.5 C294.698,176.5 283.505,165.083 283.505,151 C283.505,136.917 294.698,125.5 308.505,125.5 C322.312,125.5 333.505,136.917 333.505,151 C333.505,165.083 322.312,176.5 308.505,176.5 z" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+      </g>
+      <g>
+        <path d="M309.005,152.5 C308.867,152.5 308.755,147.127 308.755,140.5 C308.755,133.873 308.867,128.5 309.005,128.5 C309.143,128.5 309.255,133.873 309.255,140.5 C309.255,147.127 309.143,152.5 309.005,152.5 z" fill="#FFFFFF"/>
+        <path d="M309.005,152.5 C308.867,152.5 308.755,147.127 308.755,140.5 C308.755,133.873 308.867,128.5 309.005,128.5 C309.143,128.5 309.255,133.873 309.255,140.5 C309.255,147.127 309.143,152.5 309.005,152.5 z" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+      </g>
+      <path d="M309.005,152.5 L320.005,132" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+    </g>
+    <g>
+      <g>
+        <path d="M561.5,176.5 C547.693,176.5 536.5,165.083 536.5,151 C536.5,136.917 547.693,125.5 561.5,125.5 C575.307,125.5 586.5,136.917 586.5,151 C586.5,165.083 575.307,176.5 561.5,176.5 z" fill="#F5F5F5"/>
+        <path d="M561.5,176.5 C547.693,176.5 536.5,165.083 536.5,151 C536.5,136.917 547.693,125.5 561.5,125.5 C575.307,125.5 586.5,136.917 586.5,151 C586.5,165.083 575.307,176.5 561.5,176.5 z" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+      </g>
+      <g>
+        <path d="M562,152.5 C561.862,152.5 561.75,147.127 561.75,140.5 C561.75,133.873 561.862,128.5 562,128.5 C562.138,128.5 562.25,133.873 562.25,140.5 C562.25,147.127 562.138,152.5 562,152.5 z" fill="#FFFFFF"/>
+        <path d="M562,152.5 C561.862,152.5 561.75,147.127 561.75,140.5 C561.75,133.873 561.862,128.5 562,128.5 C562.138,128.5 562.25,133.873 562.25,140.5 C562.25,147.127 562.138,152.5 562,152.5 z" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+      </g>
+      <path d="M562,152.5 L580,138.25" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+    </g>
+    <g>
+      <path d="M210.5,234.5 L264.25,234.5 L264.25,263.5 L210.5,263.5 L210.5,234.5 z" fill="#F5F5F5"/>
+      <path d="M210.5,234.5 L264.25,234.5 L264.25,263.5 L210.5,263.5 L210.5,234.5 z" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+    </g>
+    <g>
+      <path d="M350.75,234.5 L404.5,234.5 L404.5,263.5 L350.75,263.5 L350.75,234.5 z" fill="#F5F5F5"/>
+      <path d="M350.75,234.5 L404.5,234.5 L404.5,263.5 L350.75,263.5 L350.75,234.5 z" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+    </g>
+    <g>
+      <path d="M281.625,234.5 L335.375,234.5 L335.375,263.5 L281.625,263.5 L281.625,234.5 z" fill="#F5F5F5"/>
+      <path d="M281.625,234.5 L335.375,234.5 L335.375,263.5 L281.625,263.5 L281.625,234.5 z" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+    </g>
+    <g>
+      <path d="M464.5,237 L518.25,237 L518.25,266 L464.5,266 L464.5,237 z" fill="#F5F5F5"/>
+      <path d="M464.5,237 L518.25,237 L518.25,266 L464.5,266 L464.5,237 z" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+    </g>
+    <g>
+      <path d="M604.75,237 L658.5,237 L658.5,266 L604.75,266 L604.75,237 z" fill="#F5F5F5"/>
+      <path d="M604.75,237 L658.5,237 L658.5,266 L604.75,266 L604.75,237 z" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+    </g>
+    <g>
+      <path d="M535.625,237 L589.375,237 L589.375,266 L535.625,266 L535.625,237 z" fill="#F5F5F5"/>
+      <path d="M535.625,237 L589.375,237 L589.375,266 L535.625,266 L535.625,237 z" fill-opacity="0" stroke="#000000" stroke-width="2"/>
+    </g>
+    <text transform="matrix(1, 0, 0, 1, 238.87, 251)">
+      <tspan x="-21.33" y="3" font-family="HelveticaNeue-Bold" font-size="12" fill="#000000">Block 1</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 308.005, 251)">
+      <tspan x="-21.33" y="3" font-family="HelveticaNeue-Bold" font-size="12" fill="#000000">Block 2</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 377.13, 251)">
+      <tspan x="-21.33" y="3" font-family="HelveticaNeue-Bold" font-size="12" fill="#000000">Block 3</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 491.87, 254)">
+      <tspan x="-21.33" y="3" font-family="HelveticaNeue-Bold" font-size="12" fill="#000000">Block 1</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 561.005, 254)">
+      <tspan x="-21.33" y="3" font-family="HelveticaNeue-Bold" font-size="12" fill="#000000">Block 2</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 630.13, 254)">
+      <tspan x="-21.33" y="3" font-family="HelveticaNeue-Bold" font-size="12" fill="#000000">Block 3</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 364.907, 146)">
+      <tspan x="-20.907" y="6.5" font-family="HelveticaNeue-Bold" font-size="18" fill="#000000">T = 5</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 623.911, 146)">
+      <tspan x="-25.911" y="6.5" font-family="HelveticaNeue-Bold" font-size="18" fill="#000000">T = 10</tspan>
+    </text>
+    <g>
+      <path d="M311.5,302.5 L311.012,322.506" fill-opacity="0" stroke="#CF7407" stroke-width="6"/>
+      <path d="M305.014,322.36 L310.622,338.501 L317.01,322.653 z" fill="#CF7407" fill-opacity="1" stroke="#CF7407" stroke-width="6" stroke-opacity="1"/>
+    </g>
+    <g>
+      <path d="M563,302.5 L562.512,322.506" fill-opacity="0" stroke="#0730CF" stroke-width="6"/>
+      <path d="M556.514,322.36 L562.122,338.501 L568.51,322.653 z" fill="#0730CF" fill-opacity="1" stroke="#0730CF" stroke-width="6" stroke-opacity="1"/>
+    </g>
+    <text transform="matrix(1, 0, 0, 1, 310.5, 371.5)">
+      <tspan x="-62.148" y="8.5" font-family="HelveticaNeue" font-size="24" fill="#000000">RDD @ T=5</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 561, 377)">
+      <tspan x="-68.82" y="3" font-family="HelveticaNeue" font-size="24" fill="#000000">RDD @ T=10</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 106.592, 222)">
+      <tspan x="-77.592" y="8.5" font-family="HelveticaNeue" font-size="24" fill="#000000">Input DStream</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 426.124, 69)">
+      <tspan x="-143.004" y="8.5" font-family="HelveticaNeue" font-size="24" fill="#000000">Batch interval = 5 seconds</tspan>
+    </text>
+  </g>
+</svg>
