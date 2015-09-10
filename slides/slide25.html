@@ -1,18 +1,27 @@
- <section data-background="images/bg2.jpg">
+<section data-background="images/bg2.jpg">
   <h2>Spark Streaming</h2>
 
-   <p class="fragment">
-     Spark Streaming is built on an abstraction called
-     <i>discretized streams</i>, or DStreams.
-   </p>
+  <ul>
+    <li class="fragment">
+      Spark Streaming uses a "micro-batch" architecture.
+    </li>
 
-   <p class="fragment">
-     A DStream is a sequence of data arriving over time.
-   </p>
+    <li class="fragment">
+      Spark Streaming continuously receives live input data streams and
+      divides the data into batches.
+    </li>
 
-   <p class="fragment">
-     Internally, each DStream is represented as a sequence of RDDs arriving at
-     each time step. Each RDD in a DStream contains data from a certain
-     interval.
-   </p>
+    <li class="fragment">
+      New batches are created at regular time intervals called
+      <i>batch intervals</i>.
+      <ul>
+        <li class="fragment">
+          At the beginning of each time interval a new batch is created.
+        </li>
+        <li class="fragment">
+          Any data that arrives during that interval gets added to that batch.
+        </li>
+      </ul>
+    </li>
+  </ul>
 </section>

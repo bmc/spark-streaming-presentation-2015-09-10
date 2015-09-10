@@ -1,14 +1,32 @@
-<section data-background="images/bg2.jpg">
-  <h2>Quick Architectural Overview</h2>
+<section data-background=images/bg2.jpg">
+  <h2>Write Less Code</h2>
+  <h3>Computing an Average, in Hadoop</h3>
 
-  <ul>
-    <li class="fragment">Your Spark program is the <i>Driver</i>.</li>
-    <li class="fragment">So is the Spark shell.</li>
-    <li class="fragment">
-      The driver program is just <i>one</i> part of a Spark application.
-    </li>
-    <li class="fragment">
-      Other parts of the application run on the cluster.
-    </li>
-  </ul>
+  <pre>
+    <code class="scala small" data-trim>
+private IntWritable one = new IntWritable(1);
+private IntWritable output = new IntWritable();
+protected void map(LongWritable key, Text value, Context context) {
+    String[] fields = value.split("\t");
+    output.set(Integer.parseInt(fields[1]));
+    context.write(one, output);
+}
+
+IntWritable one = new IntWritable(1)
+DoubleWritable average = new DoubleWritable();
+
+protected void reduce(IntWritable key,
+                      Iterable&lt;IntWritable&gt; values,
+                      Context context) {
+    int sum = 0;
+    int count = 0;
+    for (IntWritable value: values) {
+        sum += value.get();
+        count++;
+    }
+    average.set(sum / (double) count);
+    context.write(key, average);
+}
+    </code>
+  </pre>
 </section>

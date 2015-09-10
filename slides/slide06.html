@@ -1,28 +1,14 @@
 <section data-background="images/bg2.jpg">
-  <h2>What is an RDD?</h2>
+  <h2>Quick Architectural Overview</h2>
 
   <ul>
+    <li class="fragment">Your Spark program is the <i>Driver</i>.</li>
+    <li class="fragment">So is the Spark shell.</li>
     <li class="fragment">
-      "RDD" stands for "Resilient Distributed Dataset".
+      The driver program is just <i>one</i> part of a Spark application.
     </li>
-
     <li class="fragment">
-      Conceptually, an RDD is a distributed collection of elements. Think of it
-      as a distributed array or list...
-    </li>
-
-    <li class="fragment">
-      ...like an array or list in your program, but
-      spread out across multiple nodes in the cluster.
-    </li>
-
-    <li class="fragment">
-      An RDD represents <i>partitioned</i> data.
-    </li>
-
-    <li class="fragment">
-      Within your program (the Driver), an <code>RDD</code> object is a
-      <i>handle</i> to that distributed data.
+      Other parts of the application run on the cluster.
     </li>
   </ul>
 </section>

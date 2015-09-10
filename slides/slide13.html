@@ -1,18 +1,25 @@
 <section data-background="images/bg2.jpg">
-  <h2>Actions</h2>
+  <h2>Transformations</h2>
 
   <ul>
     <li class="fragment">
-      Actions trigger execution of the DAG, forcing:
-      <ul>
-        <li>the data source to be read (modulo any caching) and</li>
-        <li>the transformations to be run.</li>
-      </ul>
+      Transformations are <i>lazy</i>.
     </li>
 
     <li class="fragment">
-      Calling an action like <code>collect()</code> is conceptually similar to
-      calling <code>toArray()</code> on a Scala collection view.
+      They contribute to the execution plan (called the <i>DAG</i>, for
+      <i>Directed Acyclic Graph</i>), but they don't execute anything.
+    </li>
+
+    <li class="fragment">
+      No file is read and no transformation is performed until an
+      <i>action</i> is called.
+    </li>
+
+    <li class="fragment">
+      A RDD transformation is conceptually similar to a transformation
+      (like <code>filter()</code> or <code>map()</code>) on a Scala collection
+      <i>view</i>.
     </li>
   </ul>
 </section>

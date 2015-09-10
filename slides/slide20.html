@@ -1,7 +1,28 @@
 <section data-background="images/bg2.jpg">
-  <h2>Enough background. What about streaming?</h2>
+  <h2>DataFrames</h2>
 
-  <p class="centered">
-    Now that we have some background, let's talk about Spark Streaming.
+  <p>
+    Here's an example of creating a DataFrame from a file <i>without</i>
+    a self-describing schema. We start with an RDD and "teach" the DataFrames
+    API the schema using a case class.
   </p>
+
+  <pre>
+
+    <code class="scala" data-trim>
+val rdd = sc.textFile(
+  "hdfs://mynamenode:9000/data/people.csv"
+)
+
+case class Person(name: String, gender: String, age: Int)
+
+val personRDD = rdd.map { line =>
+  val cols = line.split(",")
+  Person(name=cols(0), gender=cols(1), age=cols(2).toInt)
+}
+
+val df = personRDD.toDF
+    </code>
+  </pre>
+
 </section>

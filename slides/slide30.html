@@ -1,24 +1,25 @@
 <section data-background="images/bg2.jpg">
-  <h2>Example</h2>
+  <h2>DStreams and RDDs</h2>
 
-  <pre>
-    <code class="scala" data-trim>
-import org.apache.spark.streaming._
+  <p>How is a DStream mapped to RDDs?</p>
 
-val ssc = StreamingContext(sc, Seconds(1))
+  <ul>
+    <li class="fragment">
+      There are actually two time intervals: the <i>batch interval</i> and
+      the <i>block interval</i>.
+    </li>
 
-// Connect to the stream on port 7777 of the streaming host.
-val linesStream = ssc.socketTextStream("somehost", 7777)
+    <li class="fragment">
+      A new RDD is created at the end of each batch interval.
+    </li>
 
-// Filter our DStream for lines with "error" and dump the
-// matching lines to a file.
-linesStream.filter { _ contains "error" }
-           .foreachRDD { _.saveAsTextFile("hdfs:/mynamenode:9000/data/stream") }
+    <li class="fragment">
+      Data that comes in during the batch interval is broken into <i>blocks</i>,
+      one block per block interval (which defaults to 200ms).
+    </li>
 
-// Start the streaming context and wait for it to "finish"
-ssc.start()
-ssc.awaitTermination()
-    </code>
-  </pre>
-
+    <li class="fragment">
+      Thus, a batch consists of multiple blocks.
+    </li>
+  </ul>
 </section>
