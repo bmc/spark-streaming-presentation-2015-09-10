@@ -85,6 +85,9 @@ end
 #    will animated them. A layer is assumed to be an SVG group (<g> element)
 #    with an ID. Tools like iDraw use <g> elements with "id" attributes to
 #    mark layers.
+# 3. As a special case, any layer that has "one-time" anywhere in its name
+#    will be marked with the Reveal.js "current-visible" class, meaning it's
+#    shown only once.
 #
 # Parameters:
 #
@@ -125,6 +128,10 @@ def augment_svg(svg_file, add_fragment_index: true)
         classes << 'fragment' unless classes.member?('fragment')
       else
         classes = ['fragment']
+      end
+      id = g.attribute('id')
+      if id.value.include?('one-time')
+        classes << ['current-visible']
       end
       set_classes(g, classes)
 
