@@ -6,6 +6,7 @@
 // Variables
 
 @code-font-size: 16px;
+@code-font-size-small: 14px;
 @font-size: 40px;
 @footer-font-size: @font-size - 15px;
 @font-weight: 300;
@@ -22,6 +23,10 @@ body {
   font-size: @font-size;
   font-family: @font-family;
   font-weight: @font-weight;
+}
+
+section {
+  line-height: 130% !important;
 }
 
 #footer {
@@ -125,13 +130,23 @@ ul {
 
 pre {
   border: 1px solid white !important;
-  background-color: #3f3f3f;
+  //background-color: #3f3f3f;
   padding: 0;
+  margin: 0 !important;
+  width: 100% !important;
+  box-shadow: 0 0 0 0 !important;
 
   code {
     padding: 15px !important;
     font-family: @monospace-font-family !important;
-    font-size: @code-font-size !important;
+    font-size: @code-font-size;
+    max-height: 700px !important;
+    height: 100% !important;
+
+    &.small {
+      font-size: @code-font-size-small;
+      line-height: 1.2;
+    }
   }
 }
 
