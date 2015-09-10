@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="792" height="612" viewBox="0, 0, 792, 612">
-  <g id="Layer_1">
+<svg version="1.1" width="792" height="612">
+  <g id="Layer_1" class="fragment" data-fragment-index="1">
     <g>
       <g>
         <path d="M15.5,134.375 L257,134.375 L257,516.625 L15.5,516.625 L15.5,134.375 z" fill="#908C8C"/>
@@ -302,13 +302,13 @@
       </g>
     </g>
   </g>
-  <g id="Layer_2">
+  <g id="Layer_2" class="fragment" data-fragment-index="2">
     <g>
       <path d="M500.5,82.5 L218.54,245.689" fill-opacity="0" stroke="#F70101" stroke-width="4"/>
       <path d="M218.54,245.689 L218.905,239.932 L210.231,250.498 L223.714,248.241 z" fill="#F70101" fill-opacity="1" stroke="#F70101" stroke-width="4" stroke-opacity="1"/>
     </g>
   </g>
-  <g id="Layer-3-one-time">
+  <g id="Layer-3-one-time" class="fragment current-visible current-visible" data-fragment-index="3">
     <g>
       <path d="M182.625,274.875 L138.727,336.549" fill-opacity="0" stroke="#FF0000" stroke-width="4"/>
       <path d="M138.727,336.549 L136.672,331.159 L133.16,344.371 L144.493,336.726 z" fill="#FF0000" fill-opacity="1" stroke="#FF0000" stroke-width="4" stroke-opacity="1"/>
@@ -336,7 +336,7 @@
       </text>
     </g>
   </g>
-  <g id="Layer_4">
+  <g id="Layer_4" class="fragment" data-fragment-index="4">
     <g>
       <g>
         <path d="M312.5,460 L411.477,460 L411.477,491.5 L312.5,491.5 L312.5,460 z" fill="#FF2A00"/>
