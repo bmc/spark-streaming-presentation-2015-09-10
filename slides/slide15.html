@@ -1,32 +1,5 @@
 <section data-background="images/bg2.jpg">
   <h2>Actions</h2>
 
-  <ul>
-    <li class="fragment">
-      Actions trigger execution of the DAG, forcing:
-      <ul>
-        <li>the data source to be read (modulo any caching) and</li>
-        <li>the transformations to be run.</li>
-      </ul>
-    </li>
-
-    <li class="fragment">
-      There are two kinds of actions.
-      <ul>
-        <li class="fragment">
-          <b>Driver:</b> Invoking the action pulls data back to the driver.
-          Examples: <code>collect()</code>, <code>count()</code>
-        </li>
-        <li class="fragment">
-          <b>Distributed:</b> The action executes on the nodes in the cluster.
-          Examples: <code>saveAsTextFile()</code>, <code>foreach()</code>
-        </li>
-      </ul>
-    </li>
-
-    <li class="fragment">
-      Calling an action like <code>collect()</code> is conceptually similar to
-      calling <code>toArray()</code> on a Scala collection view.
-    </li>
-  </ul>
+  %include "../images/rdd4.svg"
 </section>

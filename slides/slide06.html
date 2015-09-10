@@ -1,14 +1,14 @@
-<section data-background="images/bg2.jpg">
-  <h2>Quick Architectural Overview</h2>
+<section data-background=images/bg2.jpg">
+  <h2>Write Less Code</h2>
+  <h3>Computing an Average, in Spark</h3>
 
-  <ul>
-    <li class="fragment">Your Spark program is the <i>Driver</i>.</li>
-    <li class="fragment">So is the Spark shell.</li>
-    <li class="fragment">
-      The driver program is just <i>one</i> part of a Spark application.
-    </li>
-    <li class="fragment">
-      Other parts of the application run on the cluster.
-    </li>
-  </ul>
+  <pre>
+    <code class="scala" data-trim>
+var data = sc.textFile(...).split("\t")
+data.map { x => (x(0), (x(1), 1))) }
+    .reduceByKey { case (x, y) => (x._1 + y._1, x._2 + y._2) }
+    .map { x => (x._1, x._2(0) / x._2(1)) }
+    .collect()
+    </code>
+  </pre>
 </section>

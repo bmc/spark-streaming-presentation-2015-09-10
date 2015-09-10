@@ -1,14 +1,32 @@
 <section data-background=images/bg2.jpg">
   <h2>Write Less Code</h2>
-  <h3>Computing an Average, in Spark</h3>
+  <h3>Computing an Average, in Hadoop</h3>
 
   <pre>
-    <code class="scala" data-trim>
-var data = sc.textFile(...).split("\t")
-data.map { x => (x(0), (x(1), 1))) }
-    .reduceByKey { case (x, y) => (x._1 + y._1, x._2 + y._2) }
-    .map { x => (x._1, x._2(0) / x._2(1)) }
-    .collect()
+    <code class="scala small" data-trim>
+private IntWritable one = new IntWritable(1);
+private IntWritable output = new IntWritable();
+protected void map(LongWritable key, Text value, Context context) {
+    String[] fields = value.split("\t");
+    output.set(Integer.parseInt(fields[1]));
+    context.write(one, output);
+}
+
+IntWritable one = new IntWritable(1)
+DoubleWritable average = new DoubleWritable();
+
+protected void reduce(IntWritable key,
+                      Iterable&lt;IntWritable&gt; values,
+                      Context context) {
+    int sum = 0;
+    int count = 0;
+    for (IntWritable value: values) {
+        sum += value.get();
+        count++;
+    }
+    average.set(sum / (double) count);
+    context.write(key, average);
+}
     </code>
   </pre>
 </section>

@@ -2,11 +2,27 @@
   <h2>DataFrames</h2>
 
   <p>
-    That's a super-brief overview of DataFrames. We'll be seeing a few of
-    them in some of the code examples. For more information, see the
-    <i>Spark SQL and DataFrame Guide</i>, at
-    <a href="http://spark.apache.org/docs/latest/sql-programming-guide.html">
-      http://spark.apache.org/docs/latest/sql-programming-guide.html
-    </a>
+    Here's an example of creating a DataFrame from a file <i>without</i>
+    a self-describing schema. We start with an RDD and "teach" the DataFrames
+    API the schema using a case class.
   </p>
+
+  <pre>
+
+    <code class="scala" data-trim>
+val rdd = sc.textFile(
+  "hdfs://mynamenode:9000/data/people.csv"
+)
+
+case class Person(name: String, gender: String, age: Int)
+
+val personRDD = rdd.map { line =>
+  val cols = line.split(",")
+  Person(name=cols(0), gender=cols(1), age=cols(2).toInt)
+}
+
+val df = personRDD.toDF
+    </code>
+  </pre>
+
 </section>

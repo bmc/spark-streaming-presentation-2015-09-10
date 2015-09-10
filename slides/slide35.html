@@ -1,0 +1,77 @@
+<section data-background="images/bg2.jpg">
+  <h2>The Receiver Thread</h2>
+
+  %include "../images/streaming4.svg"
+
+  <aside class="notes">
+    <p>
+      <code>spark.streaming.blockInterval</code>: The number of tasks
+      per receiver per batch will be approximately
+      (batch interval / block interval). For example, a block interval of
+      200 ms will create 10 tasks per 2 second batches. Choose too low a number
+      of tasks (that is, less than the number of cores per machine) and
+      it will be inefficient, as all available cores will not be used to
+      process the data. To increase the number of tasks for a given batch
+      interval, reduce the block interval. However, the recommended
+      minimum value of block interval is about 50 ms, below which the task
+      launching overheads may be a problem.
+    </p>
+
+    <p>
+      By default, the input data received through Receivers is stored
+      in the executors’ memory with
+      <code>StorageLevel.MEMORY_AND_DISK_SER_2</code>. This serialization
+      obviously has overhead: The receiver must deserialize the received
+      data and re-serialize it using Spark’s serialization format.
+    </p>
+
+    <p>
+      Most input DStreams (except file stream or 1.3 Kafka direct stream)
+      are associated with a Receiver object that receives the data from a
+      source.
+    </p>
+
+    <p>
+      For each input source, Spark Streaming launches receivers, which are tasks
+      running within the application’s executors that collect data from the
+      input source and save it as RDDs. These receive the input data and
+      replicate it (by default) to another executor for fault tolerance.
+    </p>
+
+    <p>
+      Note that, unlike RDDs, the default persistence level of DStreams keeps
+      the data serialized in memory.
+    </p>
+
+    <p>
+      Spark Streaming offers the same fault tolerance properties for DStreams
+      as Spark has for RDDs: as long as a copy of the input data is still
+      available, it can recompute any state derived from it using the lineage
+      of the RDDs (i.e., by rerunning the operations used to process it).
+    </p>
+
+    <p>The 2nd Executor for replication is chosen randomly.</p>
+
+
+  </aside>
+  <pre>
+    <code class="scala" data-trim>
+import org.apache.spark.streaming._
+
+val ssc = StreamingContext(sc, Seconds(1))
+
+// Connect to the stream on port 7777 of the streaming host.
+val linesStream = ssc.socketTextStream("somehost", 7777)
+
+// Filter our DStream for lines with "error" and dump the
+// matching lines to a file.
+linesStream.filter { _ contains "error" }
+           .foreachRDD { _.saveAsTextFile("hdfs:/mynamenode:9000/data/stream") }
+
+// Start the streaming context and wait for it to "finish"
+ssc.start()
+ssc.awaitTermination()
+    </code>
+  </pre>
+
+</section>

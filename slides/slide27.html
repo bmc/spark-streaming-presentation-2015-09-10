@@ -3,33 +3,25 @@
 
   <ul>
     <li class="fragment">
-      At the end of the time interval the batch is done growing.
+      Spark Streaming uses a "micro-batch" architecture.
+    </li>
+
+    <li class="fragment">
+      Spark Streaming continuously receives live input data streams and
+      divides the data into batches.
+    </li>
+
+    <li class="fragment">
+      New batches are created at regular time intervals called
+      <i>batch intervals</i>.
       <ul>
         <li class="fragment">
-          The size of the time intervals is determined by a parameter called
-          the <i>batch interval</i>.
+          At the beginning of each time interval a new batch is created.
         </li>
         <li class="fragment">
-          The batch interval is typically between 500 milliseconds and
-          several seconds and is configured by the application developer.
+          Any data that arrives during that interval gets added to that batch.
         </li>
       </ul>
     </li>
-
-
-    <li class="fragment">
-      Each input batch forms an RDD.
-    </li>
-
-    <li class="fragment">
-      Each RDD is passed to Spark for
-      processing in a job.
-    </li>
-
-    <li class="fragment">
-      Thus, the stream is broken into pieces (RDDs) that
-      are processed individually from other pieces.
-    </li>
   </ul>
-
 </section>

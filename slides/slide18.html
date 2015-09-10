@@ -1,19 +1,28 @@
 <section data-background="images/bg2.jpg">
-  <h2>DataFrames are:</h2>
+  <h2>DataFrames</h2>
+
+  <p class="centered">
+    Since version 1.3, Spark has had DataFrames.
+  </p>
 
   <ul>
     <li class="fragment">
-      <i>Schema</i>-oriented.
+      Based on DataFrames in R and in Python Pandas.
     </li>
-    <li class="fragment">A schema consists of named columns and types.</li>
     <li class="fragment">
-      Examples:
+      Higher level, and easier to use, than RDDs.
+    </li>
+    <li class="fragment">
+      Significantly faster.
+    </li>
+    <li class="fragment">
+      DataFrames are the preferred interface to Spark.
+
       <ul>
-        <li>Parquet</li>
-        <li>RDBMS</li>
-        <li>Hive</li>
-        <li>JSON (inferred schema)</li>
-        <li>CSV (inferred schema)</li>
+        <li class="fragment">
+          Use them instead of RDDs, unless you can't do
+          what you need to do with DataFrames.
+        </li>
       </ul>
     </li>
   </ul>
