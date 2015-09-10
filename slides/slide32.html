@@ -1,25 +1,26 @@
 <section data-background="images/bg2.jpg">
-  <h2>DStreams and RDDs</h2>
-
-  <p>How is a DStream mapped to RDDs?</p>
+  <h2>DStream Operations</h2>
 
   <ul>
     <li class="fragment">
-      There are actually two time intervals: the <i>batch interval</i> and
-      the <i>block interval</i>.
+      A DStream is created from a <code>StreamingContext</code>.
     </li>
 
     <li class="fragment">
-      A new RDD is created at the end of each batch interval.
+      Once a DStream has been created, it offers two kinds of operations:
+      <ul>
+        <li class="fragment">
+          <i>Transformations</i>, each of which yields a new DStream
+        </li>
+        <li class="fragment">
+          <i>Output operations</i>, which write data to an external system
+        </li>
+      </ul>
     </li>
 
     <li class="fragment">
-      Data that comes in during the batch interval is broken into <i>blocks</i>,
-      one block per block interval (which defaults to 200ms).
-    </li>
-
-    <li class="fragment">
-      Thus, a batch consists of multiple blocks.
+      Any operation applied to a DStream translates to operations on the
+      underlying RDDs that are created during stream processing.
     </li>
   </ul>
 </section>

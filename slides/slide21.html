@@ -1,23 +1,19 @@
 <section data-background="images/bg2.jpg">
-  <h2>DataFrames</h2>
-
-  <p>
-    Here's an example of using a DataFrame to read a Parquet file. Parquet
-    files have a self-describing schema, so they can be used directly from
-    the DataFrame API.
-  </p>
+  <h3>Computing an Average (again)</h3>
 
   <pre>
-
     <code class="scala" data-trim>
-val df = sqlContext.read.parquet(
-   "hdfs://mynamenode:9000/data/employees.parquet"
-)
-val df2 = df.filter(df("age") < 30)
-val youngsters = df2.collect()
+// RDDs
 
-val linesRDD = sc.textFile("s3n://my-spark-bucket/foobar.txt")
+var data = sc.textFile(...).split("\t")
+data.map { x => (x(0), (x(1), 1))) }
+    .reduceByKey { case (x, y) => (x._1 + y._1, x._2 + y._2) }
+    .map { x => (x._1, x._2(0) / x._2(1)) }
+    .collect()
+
+// DataFrames
+val df = sqlContext.read.parquet("...")
+df.groupBy("name").agg("name", avg("age")).collect()
     </code>
   </pre>
-
 </section>
