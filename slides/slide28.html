@@ -1,0 +1,25 @@
+<section data-background="images/bg2.jpg">
+  <h2>DStreams and RDDs</h2>
+
+  <p>How is a DStream mapped to RDDs?</p>
+
+  <ul>
+    <li class="fragment">
+      There are actually two time intervals: the <i>batch interval</i> and
+      the <i>block interval</i>.
+    </li>
+
+    <li class="fragment">
+      A new RDD is created at the end of each batch interval.
+    </li>
+
+    <li class="fragment">
+      Data that comes in during the batch interval is broken into <i>blocks</i>,
+      one block per block interval (which defaults to 200ms).
+    </li>
+
+    <li class="fragment">
+      Thus, a batch consists of multiple blocks.
+    </li>
+  </ul>
+</section>

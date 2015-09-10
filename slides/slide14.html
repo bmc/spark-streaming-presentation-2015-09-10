@@ -1,25 +1,29 @@
 <section data-background="images/bg2.jpg">
-  <h2>DStreams and RDDs</h2>
+  <h2>DataFrames</h2>
 
-  <p>How is a DStream mapped to RDDs?</p>
+  <p class="centered">
+    Since version 1.3, Spark has had DataFrames.
+  </p>
 
   <ul>
     <li class="fragment">
-      There are actually two time intervals: the <i>batch interval</i> and
-      the <i>block interval</i>.
+      Based on DataFrames in R and in Python Pandas.
     </li>
-
     <li class="fragment">
-      A new RDD is created at the end of each batch interval.
+      Higher level, and easier to use, than RDDs.
     </li>
-
     <li class="fragment">
-      Data that comes in during the batch interval is broken into <i>blocks</i>,
-      one block per block interval (which defaults to 200ms).
+      Significantly faster.
     </li>
-
     <li class="fragment">
-      Thus, a batch consists of multiple blocks.
+      DataFrames are the preferred interface to Spark.
+
+      <ul>
+        <li class="fragment">
+          Use them instead of RDDs, unless you can't do
+          what you need to do with DataFrames.
+        </li>
+      </ul>
     </li>
   </ul>
 </section>

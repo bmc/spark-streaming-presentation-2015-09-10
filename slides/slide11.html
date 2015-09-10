@@ -1,18 +1,25 @@
- <section data-background="images/bg2.jpg">
-  <h2>Spark Streaming</h2>
+<section data-background="images/bg2.jpg">
+  <h2>Transformations</h2>
 
-   <p class="fragment">
-     Spark Streaming is built on an abstraction called
-     <i>discretized streams</i>, or DStreams.
-   </p>
+  <ul>
+    <li class="fragment">
+      Transformations are <i>lazy</i>.
+    </li>
 
-   <p class="fragment">
-     A DStream is a sequence of data arriving over time.
-   </p>
+    <li class="fragment">
+      They contribute to the execution plan (called the <i>DAG</i>, for
+      <i>Directed Acyclic Graph</i>), but they don't execute anything.
+    </li>
 
-   <p class="fragment">
-     Internally, each DStream is represented as a sequence of RDDs arriving at
-     each time step. Each RDD in a DStream contains data from a certain
-     interval.
-   </p>
+    <li class="fragment">
+      No file is read and no transformation is performed until an
+      <i>action</i> is called.
+    </li>
+
+    <li class="fragment">
+      A RDD transformation is conceptually similar to a transformation
+      (like <code>filter()</code> or <code>map()</code>) on a Scala collection
+      <i>view</i>.
+    </li>
+  </ul>
 </section>

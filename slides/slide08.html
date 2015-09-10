@@ -1,38 +1,17 @@
 <section data-background="images/bg2.jpg">
-  <h2>Spark Streaming</h2>
+  <h2>What is an RDD?</h2>
+
+  <p>An RDD can be created in three ways:</p>
 
   <ul>
+    <li class="fragment">Parallelizing a collection</li>
     <li class="fragment">
-      Provides a way to consume continual streams of data.
+      Reading data from an external (usually distributed) source, like
+      S3, Cassandra, HDFS, etc.
     </li>
-
     <li class="fragment">
-      Scalable, high-throughput, fault-tolerant.
+      Via Spark Streaming. (More on this in a bit.)
     </li>
-
-    <li class="fragment">
-      Built on top of Spark Core.
-    </li>
-
-    <ul>
-      <li class="fragment">
-        API is very similar to Core Spark API.
-      </li>
-      <li class="fragment">
-        If you already know Spark, learning Streaming is easier than learning
-        the API for a completely unrelated product (like Twitter Storm)
-      </li>
-    </ul>
-
-    <li class="fragment">
-      Supports many inputs, like TCP socket, Kafka, Flume, HDFS, S3,
-      Kinesis (and even Twitter—cool for demos).
-    </li>
-
-    <li class="fragment">
-      Currently based on RDDs, but work is underway to integrate DataFrames.
-    </li>
-
   </ul>
 
 </section>
