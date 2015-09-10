@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" width="936" height="612">
-  <g id="Layer_1" class="fragment" data-fragment-index="1">
+  <g id="Layer_1">
     <g>
       <path d="M190.167,197.5 L317.167,197.5 C323.794,197.5 329.167,202.873 329.167,209.5 L329.167,297.5 C329.167,304.127 323.794,309.5 317.167,309.5 L190.167,309.5 C183.539,309.5 178.167,304.127 178.167,297.5 L178.167,209.5 C178.167,202.873 183.539,197.5 190.167,197.5 z" fill="#F6B623"/>
       <path d="M190.167,197.5 L317.167,197.5 C323.794,197.5 329.167,202.873 329.167,209.5 L329.167,297.5 C329.167,304.127 323.794,309.5 317.167,309.5 L190.167,309.5 C183.539,309.5 178.167,304.127 178.167,297.5 L178.167,209.5 C178.167,202.873 183.539,197.5 190.167,197.5 z" fill-opacity="0" stroke="#000000" stroke-width="1.5"/>
@@ -19,7 +19,7 @@
       <tspan x="-30.072" y="27" font-family="HelveticaNeue" font-size="28" fill="#000000">Core</tspan>
     </text>
   </g>
-  <g id="Layer_2" class="fragment" data-fragment-index="2">
+  <g id="Layer_2" class="fragment" data-fragment-index="1">
     <g>
       <g>
         <path d="M14.833,240 L116.381,240 L116.381,267 L14.833,267 L14.833,240 z" fill="#057D37"/>
@@ -35,7 +35,7 @@
       <tspan x="-36.684" y="23" font-family="HelveticaNeue" font-size="24" fill="#000000">stream</tspan>
     </text>
   </g>
-  <g id="Layer_3" class="fragment" data-fragment-index="3">
+  <g id="Layer_3" class="fragment" data-fragment-index="2">
     <g>
       <g>
         <path d="M338.167,240 L378.068,240 L378.068,267 L338.167,267 L338.167,240 z" fill="#057D37"/>
@@ -73,7 +73,7 @@
       <path d="M402.5,227.167 L399.5,225.167 L402.5,233.167 L405.5,225.167 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="1" stroke-opacity="1"/>
     </g>
   </g>
-  <g id="Layer_4" class="fragment" data-fragment-index="4">
+  <g id="Layer_4" class="fragment" data-fragment-index="3">
     <g>
       <g>
         <path d="M680.167,240 L718.797,240 L718.797,267 L680.167,267 L680.167,240 z" fill="#05477D"/>

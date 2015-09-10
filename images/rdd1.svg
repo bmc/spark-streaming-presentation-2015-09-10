@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" width="1000" height="525">
-  <g id="Layer_1" class="fragment" data-fragment-index="1">
+  <g id="Layer_1">
     <g>
       <path d="M769.375,30.75 L956.875,30.75 L956.875,252 L769.375,252 L769.375,30.75 z" fill="#908C8C"/>
       <path d="M769.375,30.75 L956.875,30.75 L956.875,252 L769.375,252 L769.375,30.75 z" fill-opacity="0" stroke="#000000" stroke-width="1.5"/>
@@ -71,7 +71,7 @@
       </text>
     </g>
   </g>
-  <g id="Layer_2" class="fragment" data-fragment-index="2">
+  <g id="Layer_2" class="fragment" data-fragment-index="1">
     <g>
       <path d="M497.5,272.5 L557.876,105.955" fill-opacity="0" stroke="#000000" stroke-width="1.5" stroke-dasharray="4.5,3"/>
       <path d="M557.876,105.955 L560.228,109.148 L560.125,99.75 L554.023,106.898 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="1.5" stroke-opacity="1"/>
@@ -89,7 +89,7 @@
       </text>
     </g>
   </g>
-  <g id="Layer_3" class="fragment" data-fragment-index="3">
+  <g id="Layer_3" class="fragment" data-fragment-index="2">
     <g>
       <path d="M612.5,105.167 L775.899,291.537" fill-opacity="0" stroke="#183BDE" stroke-width="1.5" stroke-dasharray="9,7.5"/>
       <path d="M775.899,291.537 L771.967,292.059 L780.25,296.5 L776.93,287.708 z" fill="#183BDE" fill-opacity="1" stroke="#183BDE" stroke-width="1.5" stroke-opacity="1"/>
@@ -111,7 +111,7 @@
       </text>
     </g>
   </g>
-  <g id="Layer_4" class="fragment" data-fragment-index="4">
+  <g id="Layer_4" class="fragment" data-fragment-index="3">
     <g>
       <path d="M829,349.5 L829,371.85" fill-opacity="0" stroke="#FFFFFF" stroke-width="1.5"/>
       <path d="M825.7,371.85 L829,380.65 L832.3,371.85 z" fill="#FFFFFF" fill-opacity="1" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="1"/>
@@ -196,7 +196,7 @@
       </text>
     </g>
   </g>
-  <g id="Layer_5" class="fragment" data-fragment-index="5">
+  <g id="Layer_5" class="fragment" data-fragment-index="4">
     <g>
       <path d="M775.68,151.762 L624.07,309.738" fill-opacity="0" stroke="#000000" stroke-width="1.5"/>
       <path d="M775.68,151.762 L776.538,155.634 L780.25,147 L771.776,151.064 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="1.5" stroke-opacity="1"/>
@@ -220,7 +220,7 @@
       </text>
     </g>
   </g>
-  <g id="Layer_6" class="fragment" data-fragment-index="6">
+  <g id="Layer_6" class="fragment" data-fragment-index="5">
     <g>
       <g>
         <path d="M786.273,159.25 L861.25,159.25 L861.25,190.75 L786.273,190.75 L786.273,159.25 z" fill="#9DDDF4"/>

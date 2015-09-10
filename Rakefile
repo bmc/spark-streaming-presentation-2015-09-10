@@ -81,13 +81,15 @@ end
 # Augment an SVG in two ways:
 #
 # 1. Remove the "x", "y" and "viewBox" attributes from the <svg> element.
+#
 # 2. Find any layers and mark them with class="fragment", so that Reveal.js
-#    will animated them. A layer is assumed to be an SVG group (<g> element)
+#    will animate them. A layer is assumed to be an SVG group (<g> element)
 #    with an ID. Tools like iDraw use <g> elements with "id" attributes to
 #    mark layers.
-# 3. As a special case, any layer that has "one-time" anywhere in its name
-#    will be marked with the Reveal.js "current-visible" class, meaning it's
-#    shown only once.
+#
+#    a. As a special case, any layer that has "one-time" anywhere in its name
+#       will be marked with the Reveal.js "current-visible" class, meaning it's
+#       shown only once.
 #
 # Parameters:
 #
@@ -107,6 +109,38 @@ def augment_svg(svg_file, add_fragment_index: true)
     element['class'] = array.join(" ")
   end
 
+  def add_class(element, class_name)
+    classes = get_classes(element)
+    if classes
+      classes << class_name
+    else
+      classes = [class_name]
+    end
+    set_classes(element, classes)
+  end
+
+  def add_fragment(g)
+    classes = get_classes(g)
+    if classes
+      classes << 'fragment' unless classes.member?('fragment')
+    else
+      classes = ['fragment']
+    end
+    set_classes(g, classes)
+  end
+
+  def remove_fragment(g)
+    classes = get_classes(g)
+    classes.delete('fragment')
+    puts "Removed fragment from layer #{g.attribute('id').value}. classes=#{classes}"
+    if classes.length == 0
+      g.remove_attribute('class')
+    else
+      set_classes(g, classes)
+    end
+    g.remove_attribute('data-fragment-index')
+  end
+
   image = File.open(svg_file) { |f| Nokogiri::XML(f) }
   image.remove_namespaces!
   layers = image.xpath("//g[@id]")
@@ -123,21 +157,22 @@ def augment_svg(svg_file, add_fragment_index: true)
     end
   else
     layers.each_with_index do |g, i|
-      classes = get_classes(g)
-      if classes
-        classes << 'fragment' unless classes.member?('fragment')
+      # Don't mark the first layer; that should show up when the slide
+      # shows up.
+      if i == 0
+        remove_fragment(g)
       else
-        classes = ['fragment']
+        add_fragment(g)
+        if add_fragment_index
+          g['data-fragment-index'] = i.to_s
+        end
       end
+
       id = g.attribute('id')
       if id.value.include?('one-time')
-        classes << ['current-visible']
+        add_class(g, 'current_visible')
       end
-      set_classes(g, classes)
 
-      if add_fragment_index
-        g['data-fragment-index'] = (i + 1).to_s
-      end
     end
   end
 
