@@ -131,6 +131,7 @@ def augment_svg(svg_file, add_fragment_index: true)
 
   def remove_fragment(g)
     classes = get_classes(g)
+    classes = [] if classes.nil?
     classes.delete('fragment')
     puts "Removed fragment from layer #{g.attribute('id').value}. classes=#{classes}"
     if classes.length == 0
