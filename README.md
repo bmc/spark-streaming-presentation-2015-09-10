@@ -20,6 +20,13 @@ is as simple as:
 Rake will build `dist/index.html`, a [Reveal.js][] slide show. Just
 open the file in your browser, and away you go.
 
+# Installing the slide show
+
+If you want to install the slide show somewhere (e.g., a web server), copy
+the _entire_ `dist` directory (presumably renaming it).
+
+# Making PDFs
+
 To create PDF versions of the slides, open the HTML slides in Chrome or Chromium. Then,
 tack `?print-pdf` on the end of the URL, and print the result. See the Reveal.js documentation
 for details.
