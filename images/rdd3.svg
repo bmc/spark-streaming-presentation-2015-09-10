@@ -54,7 +54,7 @@
       </text>
     </g>
   </g>
-  <g id="Layer_2" class="fragment" data-fragment-index="1">
+  <g id="Layer_2" data-fragment-index="1" class="fragment">
     <g>
       <path d="M75.833,191.833 L77.057,296.767" fill-opacity="0" stroke="#FA0101" stroke-width="3" stroke-dasharray="9,6"/>
       <path d="M77.057,296.767 L72.825,294.016 L77.155,305.167 L81.224,293.919 z" fill="#FA0101" fill-opacity="1" stroke="#FA0101" stroke-width="3" stroke-opacity="1"/>
@@ -78,7 +78,7 @@
       <path d="M225.724,296.767 L221.491,294.016 L225.822,305.167 L229.891,293.919 z" fill="#FA0101" fill-opacity="1" stroke="#FA0101" stroke-width="3" stroke-opacity="1"/>
     </g>
   </g>
-  <g id="Layer_3" class="fragment" data-fragment-index="2">
+  <g id="Layer_3" data-fragment-index="2" class="fragment">
     <g>
       <g>
         <g>

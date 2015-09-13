@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" width="599.976" height="432">
-  <g id="Layer_1" class="">
+  <g id="Layer_1">
     <g>
       <path d="M78.488,132 L474.488,131.05" fill-opacity="0" stroke="#000000" stroke-width="6" stroke-dasharray="36,30"/>
       <path d="M474.502,137.05 L490.488,131.012 L474.474,125.05 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="6" stroke-opacity="1"/>

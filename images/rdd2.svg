@@ -50,7 +50,7 @@
       <path d="M250.333,28.508 L249.833,190.008" fill-opacity="0" stroke="#FFFCFC" stroke-width="1.5" stroke-dasharray="30,7.5,1.5,7.5,1.5,7.5"/>
     </g>
   </g>
-  <g id="Layer_2" class="fragment" data-fragment-index="1">
+  <g id="Layer_2" data-fragment-index="1" class="fragment">
     <g>
       <g>
         <path d="M54.674,256.25 L195.174,256.25 L195.174,477.5 L54.674,477.5 L54.674,256.25 z" fill="#908C8C"/>
@@ -223,7 +223,7 @@
       </g>
     </g>
   </g>
-  <g id="Layer_3" class="fragment" data-fragment-index="2">
+  <g id="Layer_3" data-fragment-index="2" class="fragment">
     <g>
       <path d="M75.5,190.008 L77.37,385.901" fill-opacity="0" stroke="#0004FF" stroke-width="3" stroke-dasharray="9,6"/>
       <path d="M73.17,385.941 L77.477,397.1 L81.57,385.861 M77.37,385.901 L77.477,397.1" fill-opacity="0" stroke="#0004FF" stroke-width="3" stroke-opacity="1"/>
