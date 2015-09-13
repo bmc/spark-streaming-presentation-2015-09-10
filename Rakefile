@@ -101,44 +101,40 @@ end
 def augment_svg(svg_file, add_fragment_index: true)
   def get_classes(element)
     attr = element.attribute('class')
-    attr = attr.value.split(/\s+/) if attr
-    attr
+    if attr
+      Set.new(attr.value.split(/\s+/))
+    else
+      Set.new([])
+    end
   end
 
-  def set_classes(element, array)
-    element['class'] = array.join(" ")
+  def set_classes(element, collection)
+    if collection.empty?
+      element.remove_attribute('class')
+    else
+      element['class'] = collection.to_a.join(" ")
+    end
+    element['class']
   end
 
   def add_class(element, class_name)
     classes = get_classes(element)
-    if classes
-      classes << class_name
-    else
-      classes = [class_name]
-    end
+    classes.add(class_name)
     set_classes(element, classes)
   end
 
-  def add_fragment(g)
-    classes = get_classes(g)
-    if classes
-      classes << 'fragment' unless classes.member?('fragment')
-    else
-      classes = ['fragment']
-    end
-    set_classes(g, classes)
+  def remove_class(element, class_name)
+    classes = get_classes(element)
+    classes.delete(class_name)
+    set_classes(element, classes)
+  end
+
+  def add_fragment(element)
+    add_class(element, 'fragment')
   end
 
   def remove_fragment(g)
-    classes = get_classes(g)
-    classes = [] if classes.nil?
-    classes.delete('fragment')
-    puts "Removed fragment from layer #{g.attribute('id').value}. classes=#{classes}"
-    if classes.length == 0
-      g.remove_attribute('class')
-    else
-      set_classes(g, classes)
-    end
+    remove_class(g, 'fragment')
     g.remove_attribute('data-fragment-index')
   end
 
@@ -150,12 +146,9 @@ def augment_svg(svg_file, add_fragment_index: true)
   elsif layers.length == 1
     # There's only one layer. No sense causing incremental display.
     # Remove any existing fragments.
+    puts "Image #{svg_file} is a single-layer image. No animation."
     g = layers[0]
-    classes = Set.new(get_classes(g))
-    if classes
-      classes.delete('fragment')
-      set_classes(g, classes.to_a)
-    end
+    remove_fragment(g)
   else
     layers.each_with_index do |g, i|
       # Don't mark the first layer; that should show up when the slide
@@ -171,7 +164,7 @@ def augment_svg(svg_file, add_fragment_index: true)
 
       id = g.attribute('id')
       if id.value.include?('one-time')
-        add_class(g, 'current_visible')
+        add_class(g, 'current-visible')
       end
 
     end
