@@ -5,10 +5,12 @@ Source for Philly Area Scala Enthusiasts [PHASE][] presentation on
 
 1. Install [NodeJS][] and `npm`.
 2. Install the [LESS][] preprocessor: `npm install -g less`
-3. Make sure you have a version of Ruby 2 installed. (This stuff has been
+3. Install Bower: `npm install -g bower`
+4. Run `bower install` locally.
+5. Make sure you have a version of Ruby 2 installed. (This stuff has been
    tested with 2.2.3.)
-4. Install Bundler: `gem install bundler`
-5. Use Bundler to install the required Ruby gems: `bundle install`
+6. Install Bundler: `gem install bundler`
+7. Use Bundler to install the required Ruby gems: `bundle install`
 
 # Building the Slides
 
