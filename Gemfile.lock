@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     coderay (1.1.0)
-    grizzled-ruby (0.1.8)
+    grizzled-ruby (0.1.9)
       zip (~> 2.0, >= 2.0.2)
     method_source (0.8.2)
     mini_portile (0.6.2)
